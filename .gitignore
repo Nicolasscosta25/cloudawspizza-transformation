@@ -1,0 +1,29 @@
+# Terraform
+04-infraestrutura/.terraform/
+04-infraestrutura/**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvars
+*.auto.tfvars
+04-infraestrutura/modules/lambda/build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (RabbitMQ tooling, se houver)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

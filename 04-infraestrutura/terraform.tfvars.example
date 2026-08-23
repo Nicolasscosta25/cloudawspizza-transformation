@@ -1,0 +1,5 @@
+# Copie este arquivo para terraform.tfvars e ajuste os valores.
+# allowed_ssh_cidr deve ser o SEU IP publico em formato CIDR (ex: 203.0.113.10/32).
+# Descubra o seu com: curl https://checkip.amazonaws.com
+
+allowed_ssh_cidr = "SEU_IP_PUBLICO/32"
