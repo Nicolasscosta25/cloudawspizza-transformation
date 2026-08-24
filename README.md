@@ -83,7 +83,7 @@ Desenho da arquitetura AWS-alvo: provedor e justificativa, modelos de serviço (
 **3b — Microsserviços assíncronos:** a evolução. O sistema é quebrado em `service-order` (cria e lista pedidos) e `service-payment` (processa pagamentos), comunicando-se via RabbitMQ. `service-order` publica o evento `order_created`; `service-payment` consome esse evento em background e processa o pagamento — sem nenhuma chamada HTTP direta entre os dois. Se o serviço de pagamento cair por alguns minutos, os pedidos continuam sendo aceitos normalmente.
 
 ### Fase 4 — Infraestrutura como código
-📄 [`04-infraestrutura/`](./04-infraestrutura/)
+📄 [`04-infraestrutura/`](./04-infraestrutura/) · 🗺️ [Diagrama de arquitetura](./04-infraestrutura/ARQUITETURA.md)
 
 Provisionamento real da arquitetura da Fase 2, adaptada ao **Free Tier da AWS**, via **Terraform**: VPC com sub-redes públicas e privadas, EC2 (t2.micro/t3.micro) hospedando a aplicação, RDS MySQL como banco de dados, S3 para arquivos estáticos, IAM com roles de menor privilégio, CloudWatch monitorando a instância, e uma função Lambda simulando notificações de novos pedidos.
 
