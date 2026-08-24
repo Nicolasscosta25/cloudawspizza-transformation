@@ -85,12 +85,13 @@ Desenho da arquitetura AWS-alvo: provedor e justificativa, modelos de serviço (
 ### Fase 4 — Infraestrutura como código
 📄 [`04-infraestrutura/`](./04-infraestrutura/)
 
+Provisionamento real da arquitetura da Fase 2, adaptada ao **Free Tier da AWS**, via **Terraform**: VPC com sub-redes públicas e privadas, EC2 (t2.micro/t3.micro) hospedando a aplicação, RDS MySQL como banco de dados, S3 para arquivos estáticos, IAM com roles de menor privilégio, CloudWatch monitorando a instância, e uma função Lambda simulando notificações de novos pedidos.
+
 https://claude.ai/code/artifact/c8d99d58-4bd5-4865-9599-99a73f2d17d3
 
 <img width="1152" height="902" alt="image" src="https://github.com/user-attachments/assets/2760f2b8-3d49-4fec-b9f9-6b9735c5ebea" />
 
 
-Provisionamento real da arquitetura da Fase 2, adaptada ao **Free Tier da AWS**, via **Terraform**: VPC com sub-redes públicas e privadas, EC2 (t2.micro/t3.micro) hospedando a aplicação, RDS MySQL como banco de dados, S3 para arquivos estáticos, IAM com roles de menor privilégio, CloudWatch monitorando a instância, e uma função Lambda simulando notificações de novos pedidos.
 
 ## Como as fases se conectam
 
