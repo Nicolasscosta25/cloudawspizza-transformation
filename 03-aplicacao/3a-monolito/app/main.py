@@ -1,10 +1,15 @@
 from fastapi import FastAPI, HTTPException
 
-from app import orders
+from app import db, orders
 from app.orders import Order, OrderCreate
 from app.payments import PaymentError
 
 app = FastAPI(title="CloudAWSPizza - Monolito")
+
+
+@app.on_event("startup")
+def startup():
+    db.init_db()
 
 
 @app.get("/health")
